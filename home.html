@@ -24,15 +24,16 @@
                     </div>
                     <div class="divider"></div>
                     <!-- features start -->
-                    <div>
-                        <button class="btn btn-lg">Add Money</button>
-                        <button class="btn btn-lg">Cash Money</button>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button id="show-add-money-form" class="btn btn-lg">Add Money</button>
+                        <button id="show-cash-out-form" class="btn btn-lg">Cash Money</button>
+                        <button id="show-transaction" class="btn btn-lg">Transactions</button>
                     </div>
                     <!-- features end -->
                     <div class="divider"></div>
 
                     <!-- add money start -->
-                    <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="add-money-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -56,36 +57,43 @@
                     <!-- add money end -->
 
                     <!-- cash out start -->
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form class="card-body">
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Cash Out Amount</span>
-                            </label>
-                            <input id="input-cash-out" type="text" placeholder="Amount" class="input input-bordered"
-                                required />
-                        </div>
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Pin Number</span>
-                            </label>
-                            <input id="input-cash-out-pin" type="password" placeholder="Pin Number"
-                                class="input input-bordered" required />
-                        </div>
-                        <div class="form-control mt-6">
-                            <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
-                        </div>
-                    </form>
-                </div>
-                <!-- cash out end -->
+                    <div id="cash-out-form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Cash Out Amount</span>
+                                </label>
+                                <input id="input-cash-out" type="text" placeholder="Amount" class="input input-bordered"
+                                    required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="input-cash-out-pin" type="password" placeholder="Pin Number"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- cash out end -->
+                     
+                    <!-- transactions start here -->
+                    <div id="transaction-sec">
+                        <h1 class="text-center text-5xl">Transaction History</h1>
+                    </div>
+                    <!-- transactions end here -->
 
+                </div>
             </div>
-        </div>
         </div>
     </main>
     <script src="js/utilities.js"></script>
     <script src="js/addMoney.js"></script>
     <script src="js/cashOut.js"></script>
+    <script src="js/features.js"></script>
 </body>
 
 </html>
